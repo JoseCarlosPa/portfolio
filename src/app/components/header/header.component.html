@@ -1,0 +1,90 @@
+<header
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+  [class.scrolled]="isScrolled()"
+  [class.glass]="isScrolled()">
+  <nav class="container-custom flex items-center justify-between h-16 md:h-20">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2 text-xl font-bold">
+      <span class="text-gradient">JC</span>
+      <span class="hidden sm:inline text-[var(--text-primary)]">Pacheco</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#about" class="nav-link">{{ t.t('nav.about') }}</a>
+      <a href="#experience" class="nav-link">{{ t.t('nav.experience') }}</a>
+      <a href="#skills" class="nav-link">{{ t.t('nav.skills') }}</a>
+      <a href="#projects" class="nav-link">{{ t.t('nav.projects') }}</a>
+      <a href="#education" class="nav-link">{{ t.t('nav.education') }}</a>
+      <a href="#contact" class="nav-link">{{ t.t('nav.contact') }}</a>
+    </div>
+
+    <!-- Actions -->
+    <div class="flex items-center gap-2">
+      <!-- Language Toggle -->
+      <button
+        (click)="t.toggleLanguage()"
+        class="icon-btn text-sm font-semibold"
+        [attr.aria-label]="'Switch to ' + (t.currentLang() === 'en' ? 'Spanish' : 'English')">
+        {{ t.currentLang() === 'en' ? 'ES' : 'EN' }}
+      </button>
+
+      <!-- Theme Toggle -->
+      <button
+        (click)="theme.toggleTheme()"
+        class="icon-btn"
+        [attr.aria-label]="theme.isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'">
+        @if (theme.isDarkMode()) {
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2"/>
+            <path d="M12 20v2"/>
+            <path d="m4.93 4.93 1.41 1.41"/>
+            <path d="m17.66 17.66 1.41 1.41"/>
+            <path d="M2 12h2"/>
+            <path d="M20 12h2"/>
+            <path d="m6.34 17.66-1.41 1.41"/>
+            <path d="m19.07 4.93-1.41 1.41"/>
+          </svg>
+        } @else {
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+          </svg>
+        }
+      </button>
+
+      <!-- Mobile Menu Button -->
+      <button
+        (click)="toggleMobileMenu()"
+        class="icon-btn md:hidden"
+        aria-label="Toggle menu">
+        @if (isMobileMenuOpen()) {
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"/>
+            <path d="m6 6 12 12"/>
+          </svg>
+        } @else {
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"/>
+            <line x1="4" x2="20" y1="6" y2="6"/>
+            <line x1="4" x2="20" y1="18" y2="18"/>
+          </svg>
+        }
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  @if (isMobileMenuOpen()) {
+    <div class="md:hidden glass border-t border-[var(--border-color)] animate-fade-in">
+      <div class="container-custom py-4 flex flex-col gap-4">
+        <a href="#about" (click)="closeMobileMenu()" class="nav-link-mobile">{{ t.t('nav.about') }}</a>
+        <a href="#experience" (click)="closeMobileMenu()" class="nav-link-mobile">{{ t.t('nav.experience') }}</a>
+        <a href="#skills" (click)="closeMobileMenu()" class="nav-link-mobile">{{ t.t('nav.skills') }}</a>
+        <a href="#projects" (click)="closeMobileMenu()" class="nav-link-mobile">{{ t.t('nav.projects') }}</a>
+        <a href="#education" (click)="closeMobileMenu()" class="nav-link-mobile">{{ t.t('nav.education') }}</a>
+        <a href="#contact" (click)="closeMobileMenu()" class="nav-link-mobile">{{ t.t('nav.contact') }}</a>
+      </div>
+    </div>
+  }
+</header>

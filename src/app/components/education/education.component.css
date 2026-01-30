@@ -1,0 +1,74 @@
+.education-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.education-card:hover {
+  border-color: var(--accent-indigo);
+}
+
+.education-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary);
+  border-radius: 1rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.cert-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  transition: all 0.2s ease;
+}
+
+.cert-card:hover {
+  border-color: var(--accent-indigo);
+}
+
+.cert-link {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.cert-link:hover {
+  background: var(--accent-indigo);
+  color: white;
+}
+
+.award-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  transition: all 0.2s ease;
+}
+
+.award-card:hover {
+  border-color: var(--accent-purple);
+}
+
+.award-year {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
