@@ -1,13 +1,53 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Josecarlos</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jose Carlos Pacheco Sanchez | Fullstack Developer</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Fullstack Software Developer with 6+ years of experience in React, Laravel, and scalable web applications. Based in Querétaro, México."
+    />
+    <meta
+      name="keywords"
+      content="Fullstack Developer, React, Laravel, Angular, TypeScript, Software Engineer, Mexico"
+    />
+    <meta name="author" content="Jose Carlos Pacheco Sanchez" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jose Carlos Pacheco Sanchez | Fullstack Developer" />
+    <meta
+      property="og:description"
+      content="Fullstack Software Developer with 6+ years of experience building scalable web applications."
+    />
+    <meta property="og:image" content="https://github.com/JoseCarlosPa.png" />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <script>
+      // Theme initialization - prevents flash of wrong theme
+      (function () {
+        const theme = localStorage.getItem('theme');
+        if (
+          theme === 'dark' ||
+          (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body class="antialiased">
+    <app-root></app-root>
+  </body>
 </html>
