@@ -18,7 +18,7 @@ interface Skill {
   selector: 'app-skills',
   standalone: true,
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent {
   t = inject(TranslationService);

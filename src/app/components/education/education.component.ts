@@ -21,7 +21,7 @@ interface Award {
   selector: 'app-education',
   standalone: true,
   templateUrl: './education.component.html',
-  styleUrls: ['./education.component.scss'],
+  styleUrls: ['./education.component.css'],
 })
 export class EducationComponent {
   t = inject(TranslationService);

@@ -6,7 +6,7 @@ import { DownloadService } from '../../services/download.service';
   selector: 'app-hero',
   standalone: true,
   templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.scss']
+  styleUrls: ['./hero.component.css']
 })
 export class HeroComponent {
   t = inject(TranslationService);

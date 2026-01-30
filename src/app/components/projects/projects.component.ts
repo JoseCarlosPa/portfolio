@@ -16,7 +16,7 @@ interface Project {
   selector: 'app-projects',
   standalone: true,
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent {
   t = inject(TranslationService);

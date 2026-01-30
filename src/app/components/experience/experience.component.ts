@@ -14,7 +14,7 @@ interface Experience {
   selector: 'app-experience',
   standalone: true,
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+  styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent {
   t = inject(TranslationService);
